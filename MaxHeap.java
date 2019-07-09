@@ -4,6 +4,7 @@ public class MaxHeap {
     private int size;
     private int maxsize;
     private int[] myheap;
+    private int[] otherheap;
 
     public MaxHeap(int val){
         this.maxsize=val;
