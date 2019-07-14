@@ -1,9 +1,11 @@
 //working code
+//maxheaaaap
 import java.util.*;
 public class MaxHeap {
     private int size;
     private int maxsize;
     private int[] myheap;
+    private int[] otherheap;
 
     public MaxHeap(int val){
         this.maxsize=val;
@@ -69,6 +71,13 @@ public class MaxHeap {
     }
     public void deleteTop(){
         System.out.println("Deleting "+myheap[0]);
+
+
+
+
+
+
+
         myheap[0]=myheap[size-1];
         System.out.println("new top element is "+myheap[0]);
         size--;
@@ -77,12 +86,21 @@ public class MaxHeap {
     }
 
     public static void main(String[] args) {
+        System.out.println("Enter the number of elements");
+        Scanner sc=new Scanner(System.in);
+        int val=sc.nextInt();
         MaxHeap heapo=new MaxHeap(50);
-        heapo.insert(12);
+        System.out.println("Enter the values");
+        for(int i=0;i<val;i++){
+            int num=sc.nextInt();
+            heapo.insert(num);
+        }
+
+       /* heapo.insert(12);
         heapo.insert(9);
         heapo.insert(10);
         heapo.insert(15);
-        heapo.insert(6);
+        heapo.insert(6);*/
 
         System.out.println("Heap after inserting values : ");
         heapo.prinn();
