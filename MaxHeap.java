@@ -11,12 +11,12 @@ public class MaxHeap {
         this.maxsize=val;
         this.size=0;
         myheap=new int[this.maxsize+1];
-
-
     }
+
     private int parent(int position){
         return ((position-1)/2);
     }
+
     public void insert(int num){
 
         if(size == 0) {
@@ -71,15 +71,9 @@ public class MaxHeap {
     }
     public void deleteTop(){
         System.out.println("Deleting "+myheap[0]);
-
-
-
-
-
-
-
         myheap[0]=myheap[size-1];
         System.out.println("new top element is "+myheap[0]);
+        myheap[size-1]=0;
         size--;
         fix(0);
         //prinn();
@@ -89,7 +83,7 @@ public class MaxHeap {
         System.out.println("Enter the number of elements");
         Scanner sc=new Scanner(System.in);
         int val=sc.nextInt();
-        MaxHeap heapo=new MaxHeap(50);
+        MaxHeap heapo=new MaxHeap(val+1);
         System.out.println("Enter the values");
         for(int i=0;i<val;i++){
             int num=sc.nextInt();
